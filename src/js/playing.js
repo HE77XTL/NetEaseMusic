@@ -1,10 +1,5 @@
 $( ()=>{
-
-<<<<<<< HEAD
 	$.get('./lyric.json').then((response)=>{
-=======
-	$.get('https://p65ftet0l.bkt.clouddn.com/lyric.json').then((response)=>{
->>>>>>> 62684d409ba62c86038bec3e95a864796f34d645
 		//请求歌词
 		let lyric = response.lrc.lyric;
 		let array = lyric.split('\n')
@@ -75,7 +70,6 @@ $( ()=>{
 		let time = `${pad(munites)}:${pad(left)}`;
 		let lines = $('.lines p')
 		let whichLine;
-		let k
 		// console.log(time)
 		// console.log(lines[5])
 		// console.log(lines.eq(5))
@@ -84,7 +78,6 @@ $( ()=>{
 			let nextTime = lines.eq(i+1).attr('data-time');
 			if(lines[i+1] != undefined && time>currentTime && time < nextTime){
 				whichLine = lines.eq(i);
-
 				break;
 			}			
 		}
