@@ -1,6 +1,6 @@
 $( ()=>{
 
-	$.get('/lyric.json').then((response)=>{
+	$.get('./lyric.json').then((response)=>{
 		//请求歌词
 		let lyric = response.lrc.lyric;
 		let array = lyric.split('\n')
@@ -29,7 +29,7 @@ $( ()=>{
 	})
 
 	let audio = document.createElement('audio');
-	audio.src = 'https://p65ftet0l.bkt.clouddn.com/%E8%AF%B4%E6%95%A3%E5%B0%B1%E6%95%A3.mp3';
+	audio.src = '说散就散.mp3';
 	audio.oncanplay = ()=>{
 		audio.play();
 		$('.disc-container').addClass('playing')
