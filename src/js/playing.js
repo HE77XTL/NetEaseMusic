@@ -1,6 +1,10 @@
 $( ()=>{
 
+<<<<<<< HEAD
 	$.get('./lyric.json').then((response)=>{
+=======
+	$.get('https://p65ftet0l.bkt.clouddn.com/lyric.json').then((response)=>{
+>>>>>>> 62684d409ba62c86038bec3e95a864796f34d645
 		//请求歌词
 		let lyric = response.lrc.lyric;
 		let array = lyric.split('\n')
