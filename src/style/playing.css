@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+@keyframes circle{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+
+}
+
+.page{
+	display: flex;
+	flex-direction:  column;
+	height: 100vh;
+	background: transparent url(../picture/001.jpg) no-repeat center;
+	background-size: cover;
+}
+
+
+.disc-container{
+	position: relative;
+}
+.disc-container .pointer{
+	width: 24vw;
+	position: absolute;
+	left: 50%;
+}
+.disc-container .disc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 18vw;
+}
+.disc-container .ring{
+	width: 72vw;
+}
+.disc-container .light{
+	width: 72vw;
+	position: absolute;
+}
+.disc-container .cover{
+	width: 45vw;
+	position: absolute;
+	border-radius: 50%;
+}
+.disc-container.playing .light{
+	animation: circle 10s infinite linear;
+}
+.disc-container.playing .cover{
+	animation: circle 10s infinite linear;
+}
+.disc-container .icon-play{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border: 1px solid #fff;
+	padding: 10px;
+	border-radius: 25px; 
+	background: rgba(102,102,102,0.5);
+	display: none;
+}
+
+
+.song-description{
+	text-align: center;
+	color: #fefefe;
+	line-height: 2;
+	margin-top: 20px;
+	flex-grow: 1;
+}
+.song-description .lyric{
+	height: 72px;
+	border: 1px solid;
+	overflow: hidden;
+}
+.song-description .lines{
+	transition: 0.5s;
+}
+.song-description h2{
+	font-size: 18px;
+}
+.song-description p{
+	color: hsla(0, 0%, 100%, 0.6);
+	font-size: 14px;
+	line-height: 24px;
+}
+.song-description p.active{
+	color: #fefefe;
+}
+.page > .links{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.page > .links > a{
+	width: 40vw;
+	margin: 0.5em;
+	text-align: center;
+	border: 1px solid #d33a31;
+	text-decoration: none;
+	padding: 1.5vw;
+	letter-spacing: 4px;
+	border-radius: 40vw;
+
+}
+.page > .links > .open{
+	color: #d33a31;
+}
+.page > .links > .download{
+	color: #fff;
+	background-color: #d33a31;
+}

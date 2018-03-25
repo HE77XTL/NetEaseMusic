@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易云音乐</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=1.0,viewport-fit=cover">
+	<link rel="stylesheet" href="style/playing.css">
+</head>
+<body>
+	<div class="page">
+		<div class="disc-container">
+			<img class="pointer" src="picture/needle-ip6.png" alt="指针">
+			<div class="disc" data-play="playing">
+				<img class="ring" src="picture/disc.png" alt="黑胶圆环">
+				<img class="light" src="picture/disc_light-ip6.png" alt="圆环光晕">
+				<img class="cover" src="picture/109951163169027515.jpg" alt="唱片封面">
+				<svg class="icon-play">
+					<use xlink: href="#icon-custom-play"></use>
+				</svg>
+			</div>
+		</div>
+		<div class="song-description">
+			<h2>说散就散</h2>
+			<div class="lyric">
+				<div class="lines"></div>
+			</div>
+		</div>
+		<div class="links">
+			<a class="open" href="#">打开</a>
+			<a class="download" href="#">下载</a>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src='//at.alicdn.com/t/font_603576_wkqgnks1l1c680k9.js'></script>
+	<script src="js/playing.js"></script>
+</body>
+</html>
