@@ -1,6 +1,6 @@
 $( ()=>{
 
-	$.get('/lyric.json').then((response)=>{
+	$.get('/src/lyric.json').then((response)=>{
 		//请求歌词
 		let lyric = response.lrc.lyric;
 		let array = lyric.split('\n')
