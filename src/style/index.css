@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+ul,ol,li {
+	list-style: none;
+}
+
+section {
+	padding-top: 4.6vw;
+}
+section>h2:first-child{
+	font-size: 4.5vw;
+	padding-left: 2.4vw;
+	position: relative;
+	font-weight: normal;
+	margin-bottom: 3.7vw;
+}
+section>h2:first-child::before{
+	content: '';
+	width: 2px;
+	background: #d33a31;
+	position: absolute;
+	left: 0;
+	top: 3px;
+	bottom: 3px;
+}
+
+.topbar{
+	background: #d43c33;
+	display: flex;
+	align-items: center;
+	height: 17vw;
+	padding-left: 2.6vw;
+	padding-right: 2.6vw;
+	justify-content: space-between;
+}
+.topbar svg{
+	width: 38vw;
+}
+.downloadApp{
+	color: #fff;
+	line-height: 8vw;
+	border: 1px solid rgba(255,255,255,.6);
+	border-radius: 4vw;
+	padding: 0 2.6vw;
+	text-decoration: none;
+	font-size: 4vw;
+	height: 8vw;
+}
+
+.siteNav{}
+.siteNav > ol{
+	display: flex;
+	text-align: center;
+	font-size: 4vw;
+	border: 1px solid rgba(0,0,0,.1);
+
+}
+.siteNav > ol >li {
+	flex: 1;
+}
+
+.siteNav > ol >li > span {
+	display: inline-block;
+	line-height: 10.5vw;
+	position: relative;
+}
+.siteNav > ol >li.active > span {
+	color: #d43c33;
+}
+.siteNav > ol >li.active span::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -6px;
+	right: -6px;
+	border-bottom: 2px solid #d43c33;
+}
+
+.playList{}
+
+.latesMusic{}
+
+section.srt{}
+
+
