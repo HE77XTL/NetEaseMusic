@@ -111,6 +111,15 @@ section>h2:first-child::before{
 }
 
 .latestMusic{}
+.latestMusic .download{
+	text-align: center;
+}
+
+.latestMusic .download img{
+	width: 10vw;
+	height: 10vw;
+}
+
 .latestMusic > ol{
 	padding-left: 2.4vw;
 }

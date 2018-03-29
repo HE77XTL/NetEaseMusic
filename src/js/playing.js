@@ -28,7 +28,7 @@ $( ()=>{
 	})
 
 	let audio = document.createElement('audio');
-	audio.src = '说散就散.mp3';
+	audio.src = '//p6cyl2a8g.bkt.clouddn.com/star%20sky.mp3';
 	audio.oncanplay = ()=>{
 		audio.play();
 		$('.disc-container').addClass('playing')
