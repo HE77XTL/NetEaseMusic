@@ -70,7 +70,6 @@ $( ()=>{
 		let time = `${pad(munites)}:${pad(left)}`;
 		let lines = $('.lines p')
 		let whichLine;
-		let k
 		// console.log(time)
 		// console.log(lines[5])
 		// console.log(lines.eq(5))
@@ -79,7 +78,6 @@ $( ()=>{
 			let nextTime = lines.eq(i+1).attr('data-time');
 			if(lines[i+1] != undefined && time>currentTime && time < nextTime){
 				whichLine = lines.eq(i);
-
 				break;
 			}			
 		}
