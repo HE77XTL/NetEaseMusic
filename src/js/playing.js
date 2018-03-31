@@ -8,6 +8,9 @@ $( ()=>{
 			return (s.id === songID)
 		})[0]
 		let{url} = song;
+		let {name} = song;
+		console.log(name)
+		$('.song-description h2').text(name)
 		let audio = document.createElement('audio');
 		audio.src = url;
 		audio.oncanplay = ()=>{
@@ -49,7 +52,7 @@ $( ()=>{
 
 	$.get('./lyric.json').then((response)=>{
 		//请求歌词
-		let lyric = response.lrc.lyric;
+		let lyric = response[songID-1].lrc.lyric;
 		let array = lyric.split('\n')
 		let regex = /^\[(.+)\](.+)/
 		array = array.map(function(string){
