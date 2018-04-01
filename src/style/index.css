@@ -34,6 +34,28 @@ section>h2:first-child::before{
 	bottom: 3px;
 }
 
+.layout {
+	width: 100vw;
+	height: 100vh;
+}
+.fixed-top{
+	width: 100vw;
+	height: 30vw;
+}
+.main{
+	width: 100vw;
+	height: calc(100% - 30vw);
+	overflow: scroll;
+}
+
+
+
+
+
+
+
+
+
 .topbar{
 	background: #d43c33;
 	display: flex;
@@ -84,6 +106,13 @@ section>h2:first-child::before{
 	left: -6px;
 	right: -6px;
 	border-bottom: 2px solid #d43c33;
+}
+
+.nav-content {
+	display: none;
+}
+.nav-content.active{
+	display: block;
 }
 
 .playLists{}

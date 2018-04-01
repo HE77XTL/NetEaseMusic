@@ -2,7 +2,7 @@ $( ()=>{
 
 	let songID = parseInt(location.search.match(/\bid=([^&]*)/)[1]); 
 
-	$.get('./songs.json').then((response)=>{
+	$.get('./data/songs.json').then((response)=>{
 		let songsArr = response;
 		let song = songsArr.filter((s)=>{
 			return (s.id === songID)
@@ -50,7 +50,7 @@ $( ()=>{
 
 	})
 
-	$.get('./lyric.json').then((response)=>{
+	$.get('./data/lyric.json').then((response)=>{
 		//请求歌词
 		let lyric = response[songID-1].lrc.lyric;
 		let array = lyric.split('\n')
@@ -113,21 +113,5 @@ $( ()=>{
 			return number>10 ? number+'' : '0'+number 
 		}
 	}
-
-
-
-
-	// 
-		// 	let play_lock = $('.disc').attr('data-play')
-	// 	console.log(play_lock)
-	// 	if(play_lock == 'playing'){
-	// 		$('.disc-container').removeClass('playing')
-	// 		$('.disc').attr('data-play','pause')
-	// 	}else{
-	// 		$('.disc-container').addClass('playing')
-	// 		$('.disc').attr('data-play','playing')
-	// 	}
-	// 	console.log(play_lock)
-
-
+	
 })
