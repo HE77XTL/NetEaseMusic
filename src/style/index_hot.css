@@ -1,0 +1,67 @@
+.hot-song{
+
+}
+.hot-song .hot-logo{
+	position: relative;
+	padding-left: 5.3vw;
+	height: 39vw;
+	background: url('../picture/hot_music_bg_2x.jpg') no-repeat;
+	background-size: contain;
+}
+.hot-song .hot-logo::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background-color: rgba(0,0,0,.2);
+}
+
+.hot-song .hot-icon{
+	width: 43vw;
+	height: 20vw;
+	position: relative;
+	top: 4vw;
+	overflow: hidden;
+}
+
+.hot-song .hot-icon img{
+	width: 44.3vw;	
+	position: relative;
+	top: -7vw;
+	left: -5vw;
+}
+.hot-song .updateTime{
+	color: #fff;
+	padding-top: 5vw;
+	position: relative;
+}
+
+.hot-cont li>a{
+	padding-left: 2.67vw;
+	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.hot-cont li>a span{
+	font-size: 4.5vw;
+	color: #ccc;
+}
+.hot-cont li>a .detail{
+	flex: 1;
+
+}
+.hot-cont li>a .detail h2{
+	font-size: 4.53vw;
+	line-height: 6.8vw;
+	color: rgb(51,51,51);
+	font-weight: normal;
+}
+.hot-cont li>a svg{
+	width: 5.87vw;
+	height: 5.87vw;
+	padding-right: 2.5vw;
+	fill: #aaa;
+}

@@ -5,6 +5,7 @@
 	<title>网易云音乐</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./style/index.css">
+	<link rel="stylesheet" href="./style/index_hot.css">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 		</nav>
 	</div>
 	<div class="main">
-		<div class="k1">
+		<div class="contain-scroll">
 			<div class="nav-content active">
 				<section class="playLists">
 					<h2>推荐歌单</h2>
@@ -72,7 +73,42 @@
 					<div class="copyright">网易公司版权所有©1997-2018   杭州乐读科技有限公司运营</div>
 				</section>
 			</div>
-			<div class="nav-content hot-song"></div>
+			<div class="nav-content hot-song">
+				<div class="hot-logo">
+					<div class="hot-icon">
+						<img src="./picture/index_icon_2x.png" alt="">
+					</div>
+					<p class="updateTime">更新时间</p>
+				</div>
+				<div class="hot-cont">
+					<ol>
+						<li>
+							<a href="#">
+								<span>1</span>
+								<div class="detail">
+									<h2>一生所爱</h2>
+									<p>shuqi</p>
+								</div>							
+								<svg class="playcircle">
+									<use xlink:href="#icon-playcircle"></use>
+								</svg>								
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>1</span>
+								<div class="detail">
+									<h2>一生所爱</h2>
+									<p>shuqi</p>
+								</div>							
+								<svg class="playcircle">
+									<use xlink:href="#icon-playcircle"></use>
+								</svg>								
+							</a>
+						</li>
+					</ol>
+				</div>
+			</div>
 			<div class="nav-content search"></div>
 		</div>
 	</div>

@@ -49,13 +49,6 @@ section>h2:first-child::before{
 }
 
 
-
-
-
-
-
-
-
 .topbar{
 	background: #d43c33;
 	display: flex;
