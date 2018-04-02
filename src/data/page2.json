@@ -3,5 +3,50 @@
 		"id": 1,
 		"url": "//p6cyl2a8g.bkt.clouddn.com/%E4%B8%80%E7%94%9F%E6%89%80%E7%88%B1%EF%BC%88%E8%88%92%E6%B7%87%EF%BC%89.mp3",
 		"name": "一生所爱"
+	},
+	{
+		"id": 2,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/victory.mp3",
+		"name": "Victory"
+	},
+	{
+		"id": 3,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/star%20sky.mp3",
+		"name": "star sky"
+	},
+	{
+		"id": 4,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E5%8D%81%E5%B9%B4.m4a",
+		"name": "十年"
+	},
+	{
+		"id": 5,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E5%BE%80%E4%BA%8B%E9%9A%8F%E9%A3%8E.mp3",
+		"name": "往事随风"
+	},
+	{
+		"id": 6,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E6%88%91%E4%BB%AC%E7%9A%84%E5%A4%A9%E7%A9%BA.mp3",
+		"name": "我们的天空"
+	},
+	{
+		"id": 7,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E6%B8%A1%E5%8F%A3.mp3",
+		"name": "渡口"
+	},
+	{
+		"id": 8,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E8%AF%B4%E6%95%A3%E5%B0%B1%E6%95%A3.mp3",
+		"name": "说散就散"
+	},
+	{
+		"id": 9,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E8%B5%B7%E9%A3%8E%E4%BA%86.mp3",
+		"name": "起风了"
+	},
+	{
+		"id": 10,
+		"url": "//p6cyl2a8g.bkt.clouddn.com/%E6%95%85%E6%A2%A6.mp3",
+		"name": "故梦"
 	}
 ]

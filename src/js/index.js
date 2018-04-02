@@ -1,6 +1,7 @@
 $(()=>{
+	// 获取最新音乐信息
 	$.get('./data/songs.json').then((response)=>{
-		console.log(response)
+		// console.log(response)
 		let items = response;
 		items.forEach((value)=>{
 			let $li = $(`
@@ -20,6 +21,7 @@ $(()=>{
 
 	})
 
+// 导航栏点击切换
 	$('.nav-site').on('click',(e)=>{
 		let $li = $(e.currentTarget)
 		$li.addClass('active').siblings().removeClass('active');
@@ -36,12 +38,34 @@ $(()=>{
 			return
 		}
 		$li.attr('data-download','yes');
+		// 热歌榜页面
 		if(index == 1){
 			console.log(1)
 			$.get('./data/page2.json').then((result)=>{
+				// 获取热歌榜信息
 				console.log(result)
+				let items = result;
+				// 其实可以和上面的代码合并，但是html和css尝试了两种方法，作为练习就这样了
+				items.forEach((value,index)=>{
+					let $li = $(`
+						<li>
+							<a href="#">
+								<span>${index + 1}</span>
+								<div class="detail">
+									<h2>${value.name}</h2>
+									<p>歌手</p>
+								</div>							
+								<svg class="playcircle">
+									<use xlink:href="#icon-playcircle"></use>
+								</svg>								
+							</a>
+						</li>								
+					`)
+					$('.hot-cont>ol').append($li)
+				})
 			})
 		}else if(index == 2){
+		// 搜索页面
 			console.log(2)
 			$.get('./data/page3.json').then((result)=>{
 				console.log(result)
@@ -49,5 +73,7 @@ $(()=>{
 		}
 	})
 })
+
+
 
 
