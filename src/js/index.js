@@ -31,19 +31,17 @@ $(()=>{
 	})
 
 	$('.nav-site').on('tabChange',(e,index)=>{
-		console.log(e,index);
+		// console.log(e,index);
 		let $li = $('.nav-content').eq(index);
 		if($li.attr('data-download') =='yes'){
-			console.log('LLL');
 			return
 		}
 		$li.attr('data-download','yes');
 		// 热歌榜页面
 		if(index == 1){
-			console.log(1)
 			$.get('./data/page2.json').then((result)=>{
 				// 获取热歌榜信息
-				console.log(result)
+				// console.log(result)
 				let items = result;
 				// 其实可以和上面的代码合并，但是html和css尝试了两种方法，作为练习就这样了
 				items.forEach((value,index)=>{
