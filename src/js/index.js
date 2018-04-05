@@ -65,9 +65,54 @@ $(()=>{
 		}else if(index == 2){
 		// 搜索页面
 			console.log(2)
-			$.get('./data/page3.json').then((result)=>{
-				console.log(result)
+			let APP_ID = 'j6MmRnR6gxfCy3HSWGKMh2NB-gzGzoHsz';
+			let APP_KEY = 'l1ikbAXF7958fV2NzXNOSC1t';
+
+			AV.init({
+			  appId: APP_ID,
+			  appKey: APP_KEY
+			});
+
+			let query = new AV.Query('Song');
+
+			let search = function(){
+				let value = $('input#search').val().trim();
+				console.log(value)
+				if(value == ''){
+					return
+				}
+				query.contains('name', value);
+				query.find().then(function (results) {
+					console.log(results)
+					if(results.length == 0){
+						console.log("没有找到")
+					}else{
+						console.log('???')
+						let name = results[0].attributes.name
+						console.log(name)
+					}
+				}, function (error) {
+					console.log('错误')
+				});
+			}
+
+			let timer=null, begin=new Date(), delay=1000, duration=2000;
+
+			$('input#search').on('input',()=>{
+				console.log('llld')
+				let current=new Date();;
+			    clearTimeout(timer);
+			    if(current-begin>=duration){
+			         search();
+			         begin=current;
+			    }else{
+			        timer=setTimeout(function(){
+			            search();
+			        },delay);
+			    }
 			})
+
+
 		}
 	})
 })
