@@ -13,11 +13,11 @@ $( ()=>{
 		$('.song-description h2').text(name)
 		let audio = document.createElement('audio');
 		audio.src = url;
-		audio.oncanplay = ()=>{
-			audio.play();
-			$('.disc-container').addClass('playing')
-			showIrc(audio)
-		}
+		// audio.oncanplay = ()=>{
+		// 	audio.play();
+		// 	$('.disc-container').addClass('playing')
+		// 	showIrc(audio)
+		// }
 
 	//播放暂停	
 
