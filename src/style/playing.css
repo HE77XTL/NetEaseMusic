@@ -34,6 +34,12 @@
 	width: 24vw;
 	position: absolute;
 	left: 50%;
+	transform-origin: left top;
+	transform: rotate(-8deg);
+}
+.disc-container .pointer.playing{
+	transform-origin: left top;
+	transform: rotate(0deg);
 }
 .disc-container .disc{
 	display: flex;

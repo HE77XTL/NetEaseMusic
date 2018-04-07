@@ -1,7 +1,7 @@
 $( ()=>{
 
 	let songID = parseInt(location.search.match(/\bid=([^&]*)/)[1]); 
-
+	let playLock = true;
 	$.get('./data/songs.json').then((response)=>{
 		let songsArr = response;
 		let song = songsArr.filter((s)=>{
@@ -24,6 +24,11 @@ $( ()=>{
 		$('.disc').on('touchstart',()=>{
 			if(audio.paused){
 				audio.play()
+				if(playLock){
+					$('.disc-container').addClass('playing')
+					playLock = false;
+				}
+				
 				$('.disc .light').css({
 					'AnimationPlayState': 'running'
 				})
@@ -33,6 +38,7 @@ $( ()=>{
 				$('.icon-play').css({
 					'display': 'none'
 				})
+				$('.pointer').addClass('playing')
 			}else{
 				audio.pause()
 				$('.disc .light').css({
@@ -44,6 +50,7 @@ $( ()=>{
 				$('.icon-play').css({
 					'display': 'block'
 				})
+				$('.pointer').removeClass('playing')
 			}
 		})
 
