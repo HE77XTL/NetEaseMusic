@@ -64,6 +64,16 @@ $(()=>{
 			})
 		}else if(index == 2){
 		// 搜索页面
+		// 加载热门搜索
+			$.get('./data/songs.json').then((results)=>{
+				results.forEach((value)=>{
+					let $li = $(`
+						<li><a href="#">${value.name}</a></li>
+					`)
+					$('.recommen ul').append($li)
+				})
+			})
+
 			console.log(2)
 			let APP_ID = 'j6MmRnR6gxfCy3HSWGKMh2NB-gzGzoHsz';
 			let APP_KEY = 'l1ikbAXF7958fV2NzXNOSC1t';
@@ -79,17 +89,41 @@ $(()=>{
 				let value = $('input#search').val().trim();
 				console.log(value)
 				if(value == ''){
+					$('.default').css({
+					'display': 'block'
+					})
+					$('.searchResult').css({
+						'display': 'none'
+					})
 					return
 				}
+
+				$('.default').css({
+					'display':'none'
+				})
+				$('.searchResult').css({
+					'display':'block'
+				})
+				$('.searchResult h3').text('搜索'+value)
 				query.contains('name', value);
 				query.find().then(function (results) {
 					console.log(results)
 					if(results.length == 0){
 						console.log("没有找到")
 					}else{
+						$('.searchResult ul li').remove()
 						console.log('???')
 						let name = results[0].attributes.name
 						console.log(name)
+						let $li = $(`
+							<li>
+								<div class="svg-search">
+									<img src="./picture/search.svg" alt="">
+								</div>
+								<a href="#">${name}</a>
+							</li>
+						`)
+						$('.searchResult ul').append($li)
 					}
 				}, function (error) {
 					console.log('错误')

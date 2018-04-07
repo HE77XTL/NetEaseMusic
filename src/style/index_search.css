@@ -1,6 +1,7 @@
 
 .searchBar > form {
 	padding: 4vw 2.67vw;
+	border-bottom: 1px solid #ccc;
 }
 .searchBar .inputcover{
 	display: flex;
@@ -15,7 +16,7 @@
 	height: 3.5vw;
 	margin-left: 2.5vw;
 	margin-top: 0.2vw;
-	background: transparent url(../picture/下载.svg) no-repeat;
+	background: transparent url(../picture/search.svg) no-repeat;
 }
 .searchBar .inputcover input{
 	flex: 1;
@@ -35,18 +36,28 @@
 	background: transparent url(../picture/cancel.svg) no-repeat;
 }
 
+.default {
+	/*display: none;*/
+}
+
 .recommen {
-	border: 1px solid;
 	padding-left: 2.67vw;
+}
+.recommen > h3{
+	font-size: 3.2vw;
+	line-height: 3.2vw;
+	color: #666;
+	font-weight: normal;
 }
 .recommen > ul {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 2.7vw 0;
 }
 .recommen > ul > li{
 	flex: 0 0 auto;
 	line-height: 8.5vw;
-	border: 1px solid;
+	border: 1px solid #ccc;
 	border-radius: 5vw;
 	padding: 0 4vw;
 	margin-bottom: 2vw;
@@ -56,3 +67,77 @@
 	color: #ccc;
 	font-size: 4vw;
 }
+.history .search-list {}
+.history .search-list li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	padding: 3.2vw 0;
+}
+.history .search-list li .svg-time{
+	width: 4vw;
+	height: 4vw;
+	margin: 0 2.7vw;
+}
+.history .search-list li a{
+	flex: 1;
+}
+.history .search-list li .svg-delete{
+	width: 3.5vw;
+	height: 3.5vw;
+	margin: 0 3vw;
+}
+.history .search-list li::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	left: 10vw;
+	bottom: 0;
+	border-bottom: 1px solid #ccc;
+}	
+
+.searchResult {
+	display: none;
+}
+.searchResult > h3{
+	font-size: 4vw;
+	font-weight: normal;
+	line-height: 13vw;
+	border-bottom: 1px solid #ccc;
+	margin-left:2.7vw;
+	color: #507daf;
+}
+.searchResult .result li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	padding: 3.2vw 0;
+}
+.result li .svg-search{
+	width: 4vw;
+	height: 4vw;
+	margin: 0 2.7vw;
+}
+.result li a{
+	color: #666;
+	flex: 1;
+}
+.searchResult .result li::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	left: 10vw;
+	bottom: 0;
+	border-bottom: 1px solid #ccc;
+}
+.result li .svg-delete{
+	width: 4vw;
+	height: 4vw;
+	margin: 0 3vw;
+}
+
+
