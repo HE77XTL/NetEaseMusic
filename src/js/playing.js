@@ -13,6 +13,23 @@ $( ()=>{
 		$('.song-description h2').text(name)
 		let audio = document.createElement('audio');
 		audio.src = url;
+		showIrc(audio)
+		console.log(audio.ended)
+		//播放结束
+		audio.onended=function(){
+			audio.pause()
+			$('.disc .light').css({
+				'AnimationPlayState': 'paused'
+			})
+			$('.disc .cover').css({
+				'AnimationPlayState': 'paused'
+			})
+			$('.icon-play').css({
+				'display': 'block'
+			})
+			$('.pointer').removeClass('playing')	
+			$('.lines').offset({top:393,left:0});		
+		};
 		// audio.oncanplay = ()=>{
 		// 	audio.play();
 		// 	$('.disc-container').addClass('playing')
@@ -107,9 +124,11 @@ $( ()=>{
 			}
 			if(whichLine){
 				whichLine.addClass('active').prev().removeClass('active')
-				let baseTop = $('.lines').offset().top;
+				let baseTop = $('.lines').offset().top;	
+				let left = 	$('.lines').offset().left;		
 				let lineTop = whichLine.offset().top;
 				let move = lineTop - baseTop-$('.lyric').height()/3;
+				console.log(baseTop,lineTop,move,left)
 				$('.lines').css({
 					'transform': `translateY(-${move}px)`
 				})
