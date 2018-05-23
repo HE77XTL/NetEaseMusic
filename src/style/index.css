@@ -118,10 +118,15 @@ section>h2:first-child::before{
 .playLists > ul > li{
 	width: 32.7vw;
 }
-.playLists > ul > li >img{
+.playLists > ul > li a{
+	width: 32.7vw;
+	color: #000;
+}
+
+.playLists > ul > li img{
 	width: 100%;
 }
-.playLists > ul > li > p{
+.playLists > ul > li  p{
 	font-size: 3.5vw;
 	line-height: 1.2;
 	padding: 0 5px;
