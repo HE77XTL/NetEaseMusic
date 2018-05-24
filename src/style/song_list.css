@@ -6,9 +6,36 @@ body {
 
 }
 .list_head {
+	position: relative;
+}
+.list_head::after {
+	content: '';
+    background-color: rgba(168, 151, 151, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+.list_head .bg {
+	width: 100vw;
+	height: 100%;
+	background: transparent url(../picture/001.webp) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.3;
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);  
+}
+.head_wrap {
 	display: flex;
 	border: 1px solid #ccc;
+	padding: 8vw 4vw;
 }
+
 .listCover {
 	width: 34vw;
 }
@@ -16,12 +43,45 @@ body {
 	width: 100%;
 }
 
+.list_title {
+
+}
+.list_title h3{
+	margin: 0;	
+	font-size: 16px;
+	line-height: 20px;
+}
 
 
+.list_profile {
+	padding: 4vw;
+}
 
+.list_profile .introduction{
+	height: 20vw;
+	padding-top: 4vw;
+}
 
+.list_profile .introduction p{
+	display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
 
+.list_detail {
+	
+}
 
+.list_detail h4 {
+	margin: 0;
+	background: #eeeff0;
+	padding: 0 4vw;
+	font-size: 12px;
+	line-height: 24px;
+	font-weight: normal;
+}
 
 
 
