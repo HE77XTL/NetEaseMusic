@@ -20,7 +20,7 @@ $(()=>{
 				</li>								
 			`)
 
-			$('.list_detail ul').append($li)
+			$('.hot-cont>ol').append($li)
 		})
 	})
 

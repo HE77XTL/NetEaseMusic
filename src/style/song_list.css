@@ -85,51 +85,6 @@ body {
 
 
 
-
-
-
-
-/*
-.hot-song{
-
-}
-.hot-song .hot-logo{
-	position: relative;
-	padding-left: 5.3vw;
-	height: 39vw;
-	background: url('../picture/hot_music_bg_2x.jpg') no-repeat;
-	background-size: contain;
-}
-.hot-song .hot-logo::before{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	content: '';
-	background-color: rgba(0,0,0,.2);
-}
-
-.hot-song .hot-icon{
-	width: 43vw;
-	height: 20vw;
-	position: relative;
-	top: 4vw;
-	overflow: hidden;
-}
-
-.hot-song .hot-icon img{
-	width: 44.3vw;	
-	position: relative;
-	top: -7vw;
-	left: -5vw;
-}
-.hot-song .updateTime{
-	color: #fff;
-	padding-top: 5vw;
-	position: relative;
-}
-
 .hot-cont li>a{
 	padding: 0 2.67vw;
 	margin: 2vw 0;
@@ -180,4 +135,6 @@ body {
 	height: 5.87vw;
 	fill: #aaa;
 }
-*/
+
+
+
