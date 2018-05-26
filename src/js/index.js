@@ -66,9 +66,11 @@ $(()=>{
 		// 搜索页面
 		// 加载热门搜索
 			$.get('./data/songs.json').then((results)=>{
+				console.log(results)
 				results.forEach((value)=>{
+					console.log(value)
 					let $li = $(`
-						<li><a href="#">${value.name}</a></li>
+						<li><a href="playing.html?id=${value.id}">${value.name}</a></li>
 					`)
 					$('.recommen ul').append($li)
 				})
@@ -120,7 +122,7 @@ $(()=>{
 								<div class="svg-search">
 									<img src="./picture/search.svg" alt="">
 								</div>
-								<a href="#">${name}</a>
+								<a href="playing.html?id=${value.id}">${name}</a>
 							</li>
 						`)
 						$('.searchResult ul').append($li)
@@ -145,6 +147,18 @@ $(()=>{
 			        },delay);
 			    }
 			})
+			$('input#search').on('keypress',function(e) {  
+				console.log(777)
+		        var keycode = e.keyCode;  
+		        var searchName = $(this).val();  
+		        if(keycode=='13') {  
+		            e.preventDefault(); 
+		            console.log("kkkk") 
+		            search()  
+		            //请求搜索接口  
+		              
+		        }  
+			 }); 
 
 
 		}
