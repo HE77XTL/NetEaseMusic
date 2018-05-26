@@ -1,6 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
 body {
 	padding: 0;
 	margin: 0;
+	background: #f8f8f8;
+}
+.layout {
 }
 .song_list_wrap {
 
@@ -71,7 +81,7 @@ body {
 }
 
 .list_detail {
-	
+	overflow-x: hidden;
 }
 
 .list_detail h4 {
@@ -83,7 +93,10 @@ body {
 	font-weight: normal;
 }
 
-
+.hot-cont ol {
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
 
 .hot-cont li>a{
 	padding: 0 2.67vw;
@@ -125,9 +138,9 @@ body {
 .hot-cont li>a .detail::after{
 	content: '';
 	position: absolute;
-	left: 0;
+	left: 7vw;
 	bottom: 0;
-	width: 100%;
+	width: 108%;
 	border-bottom: 1px solid rgba(0,0,0,.1);
 }
 .hot-cont li>a svg{
@@ -138,3 +151,24 @@ body {
 
 
 
+.collectIcon {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100vw;
+    padding: 2vw;
+    background: #fff;
+}
+.collectIcon > div {
+	border: 1px solid #ccc;
+	border-radius: 7vw;
+	width: 84vw;
+	margin: 0 auto;
+	background: #d43c33;
+	font-size: 4.5vw;
+	line-height: 10vw;
+}
+.collectIcon a {
+	text-decoration: none;
+	color: #fff;
+}

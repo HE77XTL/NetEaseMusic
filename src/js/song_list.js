@@ -11,7 +11,7 @@ $(()=>{
 						<span>${index + 1}</span>
 						<div class="detail">
 							<h2>${value.name}</h2>
-							<p>歌手</p>
+							<p>歌手-专辑</p>
 						</div>							
 						<svg class="playcircle">
 							<use xlink:href="#icon-playcircle"></use>
