@@ -116,13 +116,14 @@ $(()=>{
 						$('.searchResult ul li').remove()
 						console.log('???')
 						let name = results[0].attributes.name
+						let id = results[0].attributes.id
 						console.log(name)
 						let $li = $(`
 							<li>
 								<div class="svg-search">
 									<img src="./picture/search.svg" alt="">
 								</div>
-								<a href="playing.html?id=${value.id}">${name}</a>
+								<a href="playing.html?id=${id}">${name}</a>
 							</li>
 						`)
 						$('.searchResult ul').append($li)
