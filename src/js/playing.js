@@ -30,11 +30,11 @@ $( ()=>{
 			$('.pointer').removeClass('playing')	
 			$('.lines').offset({top:393,left:0});		
 		};
-		// audio.oncanplay = ()=>{
-		// 	audio.play();
-		// 	$('.disc-container').addClass('playing')
-		// 	showIrc(audio)
-		// }
+		audio.oncanplay = ()=>{
+			audio.play();
+			$('.disc-container').addClass('playing')
+			showIrc(audio)
+		}
 
 	//播放暂停	
 
